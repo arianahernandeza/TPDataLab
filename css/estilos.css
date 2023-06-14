@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Open+Sans:wght@100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+
+nav,
+header,
+main
+ {
+    width: 100vw;
+    padding: 0 8.33vw;
+}
+
+section, video {width: 100%;}
+
+header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/*mostrar es la clase que utilizamos 
+en el código de js*/
+.mostrar {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 12vh;
+    left: 0vw;
+    background-color: #151515;
+    width: 100vw;
+    padding: 2vw;
+}
+
+nav {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    color: white;
+    background-color: #292929;
+    height: 12vh;
+    padding: 0 8.33vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav div {
+    width: 24%;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a,
+nav h1,
+header h3,
+header h1 {
+    font-family: 'DM Sans', sans-serif;
+    line-height: 125%;
+    vertical-align: top;
+    font-size: 40px;
+}
+
+
+header h3 {
+    font-weight: 400;
+    margin-top: 40px;
+    color: #292929;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 16px;
+}
+
+nav h1, header h1{
+    font-weight: 400;
+}
+
+main section div {
+    width: 45.83%;
+    margin-bottom: 40px; 
+}
+  
+section div img {
+height: 100%;
+ width: 100%;
+justify-content: space-between;}
+
+img{
+    filter: grayscale(0%);
+    transition: filter 1.5s;
+}
+
+img:hover{
+    filter: grayscale(100%);
+}
+
+main section {
+justify-content: space-between;
+display: flex;
+flex-wrap: wrap;
+}
+
+nav h1 {
+    font-weight: 500;
+    margin: 0;
+}
+
+header h1 {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+header p,
+nav a,
+header a {
+    font-size: 20px;    
+}
+
+nav a,
+header a {
+    color: white;
+}
+
+header a {
+    text-transform: capitalize;
+}
+
+nav span {
+    display: none;
+}
+
+/*lo hago desaparecer*/
+
+.icon-menu,
+.icon-icono-1,
+.icon-icono-2 {
+    /*color: red;*/
+    font-size: 6vw;
+    transition: all 1s;
+}
+
+.icon-menu:hover {
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    /*implementamos la mano*/
+}
+
+.trabajemos-btn {
+    background-color: #292929;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 40px;
+    transition: all 1s;
+    box-shadow: unset;
+  }
+
+.trabajemos-btn:hover {
+    background-color: #092f6b;
+    box-shadow: 2px 3px 3px rgba(0,0,0,0.5);
+}
+
+footer{
+    margin-top: 70px;
+    text-align: center;
+    background-color: #292929;
+    color: white;
+    padding: 30px;
+    margin-left: 0px;
+    margin-right: 0px;
+    font-size: 15px;
+    animation-name: miMovimiento;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-duration: alternate-reverse;
+    animation-delay: 3s;
+}
+
+@media(max-width:992px) {
+    nav div {
+        width: 40%;
+    }
+}
+
+@media (max-width: 768px) {
+    nav div {
+        display: none;
+    }
+    @media(max-width:992px) {
+        nav div {
+            width: 40%;
+        }
+    }   
+}
+
+@media (max-width: 768px) {        
+    nav div {
+        display: none;
+    }
+    nav span {
+        display: inline;
+    }
+    
+    main section div {
+        width: 100%;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+}
+
+@keyframes miMovimiento {
+    0% {
+        background-color: #0b3c5d;
+    }
+    25%{
+        background-color: #3282b8;
+    }
+    50%{
+        background-color: #9dd5fa;
+    }
+    75% {
+        background-color: #fcbf49;
+    }
+    100%{
+        background-color: #ff6464;
+    }
+  }
